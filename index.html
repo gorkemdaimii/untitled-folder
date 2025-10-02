@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Coffy WebAR - Basit</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/ar-js-org@3.4.5/aframe/build/aframe-ar.js"></script>
+  <style>html,body{margin:0;overflow:hidden;background:#000}</style>
+</head>
+<body>
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled:false;">
+    <!-- Hazır hiro marker: marker görününce içerik çıkar -->
+    <a-marker preset="hiro">
+      <!-- 3D model (.glb) yerine şimdilik kahverengi silindir = kahve bardağı -->
+      <a-cylinder position="0 0.5 0" radius="0.25" height="1"
+                  color="#8B4513"></a-cylinder>
+      <!-- Slogan -->
+      <a-text value="Birlikte Daha Sıcak" position="-0.6 1.2 0"
+              color="#FFA500" width="3"></a-text>
+    </a-marker>
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
