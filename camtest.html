@@ -1,0 +1,10 @@
+<!doctype html><meta name=viewport content="width=device-width,initial-scale=1">
+<body style="margin:0;background:#000;color:#fff"><video id=v playsinline autoplay style="width:100vw;height:100vh;object-fit:cover"></video>
+<script>
+(async()=>{
+  try{
+    const s=await navigator.mediaDevices.getUserMedia({video:{facingMode:"environment"}});
+    v.srcObject=s;
+  }catch(e){document.body.innerText="Kamera hatası: "+e;}
+})();
+</script>
